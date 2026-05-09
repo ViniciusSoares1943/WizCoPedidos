@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using WizCoPedidos.WebApi.Data;
+using WizCoPedidos.WebApi.Repositories;
+using WizCoPedidos.WebApi.Repositories.Interfaces;
+using WizCoPedidos.WebApi.Services;
+using WizCoPedidos.WebApi.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +15,15 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(connectionString);
 });
 
+// Repositories
+builder.Services.AddScoped<IPedidoRepository, PedidoRepository>();
+builder.Services.AddScoped<IItemPedidoRepository, ItemPedidoRepository>();
+
+// Services
+builder.Services.AddScoped<IPedidoService, PedidoService>();
+builder.Services.AddScoped<IItemPedidoService, ItemPedidoService>();
+
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
