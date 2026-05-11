@@ -20,6 +20,23 @@ API simples para gestão de pedidos, desenvolvida para teste técnico backend.
 - `WizCoPedidos.WebApi.Tests`: testes unitários
 - `WizCoPedidos.sln`: solution principal
 
+### Estrutura de pastas (WebApi)
+
+- `Controllers/`: endpoints HTTP da API.
+- `Services/`: regras de negócio e orquestração dos casos de uso.
+- `Services/Interfaces/`: contratos das camadas de serviço.
+- `Repositories/`: acesso a dados via EF Core.
+- `Repositories/Interfaces/`: contratos da camada de repositório.
+- `Data/`: `AppDbContext` e configurações de persistência.
+- `Entidades/`: modelos de domínio persistidos no banco.
+- `Models/Dto/`: contratos de entrada e saída da API.
+- `Models/Enum/`: enums de domínio (ex.: status do pedido).
+- `Mappings/`: perfis do AutoMapper para conversão entre entidades e DTOs.
+- `Validators/`: validações de entrada com FluentValidation.
+- `Middlewares/`: middleware global de tratamento de exceções.
+- `Exceptions/`: exceções de negócio/customizadas.
+- `Migrations/`: histórico de migrations do EF Core.
+
 ## Como executar a aplicação
 
 ### Pré-requisitos
