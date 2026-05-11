@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WizCoPedidos.WebApi.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -33,7 +33,7 @@ namespace WizCoPedidos.WebApi.Migrations
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     PedidoId = table.Column<Guid>(type: "TEXT", nullable: false),
                     ProdutoNome = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
-                    Quantidade = table.Column<decimal>(type: "TEXT", precision: 18, scale: 2, nullable: false),
+                    Quantidade = table.Column<int>(type: "INTEGER", precision: 18, scale: 2, nullable: false),
                     PrecoUnitario = table.Column<decimal>(type: "TEXT", precision: 18, scale: 2, nullable: false)
                 },
                 constraints: table =>
@@ -51,6 +51,7 @@ namespace WizCoPedidos.WebApi.Migrations
                 name: "IX_ItensPedido_PedidoId",
                 table: "ItensPedido",
                 column: "PedidoId");
+
         }
 
         /// <inheritdoc />

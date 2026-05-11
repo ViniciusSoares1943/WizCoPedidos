@@ -1,6 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+#
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizCoPedidos.WebApi", "WizCoPedidos.WebApi\WizCoPedidos.WebApi.csproj", "{6E98CE13-4390-42A6-9C9E-FB2FF63B1DCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizCoPedidos.WebApi.Tests", "WizCoPedidos.WebApi.Tests\WizCoPedidos.WebApi.Tests.csproj", "{71A12516-6AC6-428B-B2BB-A4760EE6AB3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5F16E66D-2F9E-4FAB-8D06-23FDAE249D61}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +20,9 @@ Global
 		{6E98CE13-4390-42A6-9C9E-FB2FF63B1DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E98CE13-4390-42A6-9C9E-FB2FF63B1DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E98CE13-4390-42A6-9C9E-FB2FF63B1DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71A12516-6AC6-428B-B2BB-A4760EE6AB3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71A12516-6AC6-428B-B2BB-A4760EE6AB3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71A12516-6AC6-428B-B2BB-A4760EE6AB3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71A12516-6AC6-428B-B2BB-A4760EE6AB3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -46,13 +46,13 @@ public class AppDbContext : DbContext
                 .HasMaxLength(200);
 
             entity.Property(x => x.Quantidade)
-                .HasPrecision(18, 2);
+                .IsRequired();
 
             entity.Property(x => x.PrecoUnitario)
                 .HasPrecision(18, 2);
 
             entity.HasOne<Pedido>()
-                .WithMany()
+                .WithMany(p => p.ItemPedidos)
                 .HasForeignKey(x => x.PedidoId)
                 .OnDelete(DeleteBehavior.Cascade);
         });

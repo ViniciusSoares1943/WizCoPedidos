@@ -35,9 +35,9 @@ namespace WizCoPedidos.WebApi.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Quantidade")
+                    b.Property<int>("Quantidade")
                         .HasPrecision(18, 2)
-                        .HasColumnType("TEXT");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -75,10 +75,15 @@ namespace WizCoPedidos.WebApi.Migrations
             modelBuilder.Entity("WizCoPedidos.WebApi.Entidades.ItemPedido", b =>
                 {
                     b.HasOne("WizCoPedidos.WebApi.Entidades.Pedido", null)
-                        .WithMany()
+                        .WithMany("ItemPedidos")
                         .HasForeignKey("PedidoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("WizCoPedidos.WebApi.Entidades.Pedido", b =>
+                {
+                    b.Navigation("ItemPedidos");
                 });
 #pragma warning restore 612, 618
         }
