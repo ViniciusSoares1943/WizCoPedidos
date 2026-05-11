@@ -17,11 +17,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Repositories
 builder.Services.AddScoped<IPedidoRepository, PedidoRepository>();
-builder.Services.AddScoped<IItemPedidoRepository, ItemPedidoRepository>();
 
 // Services
 builder.Services.AddScoped<IPedidoService, PedidoService>();
-builder.Services.AddScoped<IItemPedidoService, ItemPedidoService>();
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
