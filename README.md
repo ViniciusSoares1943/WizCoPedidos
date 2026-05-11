@@ -67,6 +67,8 @@ dotnet test WizCoPedidos.sln
 "DefaultConnection": "Data Source=app.db"
 ```
 
+Ao iniciar a API, as migrations do EF Core são aplicadas automaticamente (`Database.Migrate()` no startup).
+
 O arquivo `app.db` é criado/atualizado no projeto `WizCoPedidos.WebApi`.
 
 ## Logs
